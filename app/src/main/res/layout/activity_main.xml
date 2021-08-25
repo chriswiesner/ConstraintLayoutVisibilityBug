@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/top_flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="top1, top2"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalBias="0"
+        app:flow_horizontalGap="8dp"
+        app:flow_verticalGap="8dp"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toTopOf="@id/bottom_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+
+    <TextView
+        android:id="@+id/top1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello my World!"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/top2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello another World!"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/bottom_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="more, more2, bottom_flow"
+        app:flow_horizontalBias="0"
+        app:flow_maxElementsWrap="1"
+        app:flow_verticalGap="4dp"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More Info"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/more2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More info 2"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/bottom_flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="bottom_left, bottom_right"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalBias="0"
+        app:flow_horizontalGap="8dp"
+        app:flow_verticalGap="8dp"
+        app:flow_wrapMode="chain"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/bottom_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bottom Left"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/bottom_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BottomRight"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
